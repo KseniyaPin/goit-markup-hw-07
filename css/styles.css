@@ -46,6 +46,7 @@ img {
     margin: 0;
 }
 
+
 @media screen and (max-width: 1199px) {
     .strategy-icons {
         display: none;
@@ -96,17 +97,17 @@ img {
 
 /*   ============ Hero  ============*/
 
-    .hero {
-        padding: 112px 0px;
-                
-        text-align: center;
-        background-color: var(--primary-text-color);
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/dark-bg-428.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+.hero {
+    padding: 112px 0px;
+            
+    text-align: center;
+    background-color: var(--primary-text-color);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/dark-bg-428.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
-    }
+}
 
 /* 2x screens, retina, 640x480 image */
 @media screen and (min-device-pixel-ratio: 2),
@@ -188,6 +189,14 @@ screen and (min-resolution: 2dppx) {
     /*  ============ p for text  ============ */
 
     .title-text {
+        color: var(--title-text-color);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    }
+
+    .title-text.strategy {
         color: var(--title-text-color);
         font-weight: 500;
         font-size: 16px;
@@ -285,9 +294,9 @@ screen and (min-resolution: 2dppx) {
     .list-customers {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-
-        row-gap: 72px;      
+        justify-content: center;
+        row-gap: 72px;
+        column-gap: 16px;
     }
 
     .customers-link {
@@ -336,7 +345,6 @@ screen and (min-resolution: 2dppx) {
 
     .text-block {
         text-align: center;
-        margin-bottom: 72px;
     }
 
     .text-block .title-text {
@@ -355,7 +363,6 @@ screen and (min-resolution: 2dppx) {
         max-width: 208px;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 72px;
     }
 
     .footer-title-text {
@@ -409,6 +416,7 @@ screen and (min-resolution: 2dppx) {
 
     .footer-input-form {
         margin-bottom: 16px;
+        padding: 0px 8px;
         font-family: inherit;
 
         max-width: 398px;
@@ -470,6 +478,7 @@ screen and (min-resolution: 2dppx) {
 
 /* =========================================== */
 /*  ============= Modal window = ============ */
+/* =========================================== */
 
 .backdrop {
     position: fixed;
@@ -719,11 +728,6 @@ screen and (min-resolution: 2dppx) {
 }
 
 
-/*  ============= Modal window = ============ */
-/* =========================================== */
-
-
-
     /*  ============ Portfolio  ============ */
 
     .card {
@@ -813,20 +817,16 @@ screen and (min-resolution: 2dppx) {
     }
 
 
-
-
-
-
 /* ================================== */
-
 /* ========= T A B L E T ============ */
-
 /* ================================== */
 
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
     .container.tablet {
         max-width: 582px;
+        row-gap: 72px;
+        column-gap: 24px;
     }
 }
 
@@ -891,7 +891,7 @@ screen and (min-resolution: 2dppx) {
     .nav-link.current::after {
         display: block;
         position: absolute;
-        bottom: 0;
+        bottom: -1px;
         content: '';
 
         width: 100%;
@@ -1009,6 +1009,7 @@ screen and (min-resolution: 2dppx) {
 
     .list-customers {
         column-gap: 24px;
+        justify-content: center;
     }
 
     .customers-list-icon {
@@ -1032,11 +1033,11 @@ screen and (min-resolution: 2dppx) {
 
     .text-block {
         text-align: left;
-        margin-right: 24px;
     }
 
     .footer-social-content {
-        margin-left: 0px;
+        width: 208px;
+        margin: 0px;
     }
 
     /*  ============ Footer form - tablet ============ */
@@ -1157,6 +1158,8 @@ screen and (min-resolution: 2dppx) {
     .hero {
         padding: 188px 0px;
         max-width: 1440px;
+        margin-right: auto;
+        margin-left: auto;
 
         text-align: center;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/dark-bg-1440.jpg');
@@ -1252,10 +1255,6 @@ screen and (min-resolution: 2dppx) {
         margin-left: 0px;
     }
 
-    .card-options:not(:last-child) {
-        margin-right: 24px;
-    }
-
     /*  ============ Customers  ============*/
 
     .customers {
@@ -1334,6 +1333,7 @@ screen and (min-resolution: 2dppx) {
 
 /*========================================================  */
 /*  =========== Modal window for tablet / desctop ========= */
+/*========================================================  */
 
 @media screen and (min-width: 440px) {
 
@@ -1352,11 +1352,6 @@ screen and (min-resolution: 2dppx) {
         display: flex;
     }
 }
-
-/*  =========== Modal window for tablet / desctop ========= */
-/*========================================================  */
-
-
 
 
 /*  ============ Overlay  ============*/
