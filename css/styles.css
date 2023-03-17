@@ -877,7 +877,7 @@ screen and (min-resolution: 2dppx) {
         display: block;
         position: relative;
         padding-top: 24px;
-        padding-bottom: 18px;
+        padding-bottom: 24px;
 
         font-weight: 500;
         font-size: 16px;
@@ -891,7 +891,7 @@ screen and (min-resolution: 2dppx) {
     .nav-link.current::after {
         display: block;
         position: absolute;
-        bottom: -1px;
+        bottom: 0px;
         content: '';
 
         width: 100%;
@@ -1206,6 +1206,10 @@ screen and (min-resolution: 2dppx) {
         background-color: var(--bg-color);
         border-radius: 4px;
 
+    }
+
+    .title-text.strategy {
+        font-weight: 400;
     }
 
     .strategy-list-icon {
